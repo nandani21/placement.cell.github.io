@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/studentstyle.css">
+</head>
+<body>
+    <main id="site-main">
+        <div class="main-container">
+            <div class="box-nav d-flex justify-between">
+                    <a href="/home" class="border-shadow">
+                        Home
+                    </a>
+            </div>  
+            <!-- for adding a new student details -->
+            <div class="form-title text-center">
+                <h2 class="text-dark">New Student</h2>
+                <span class="text-light">Use the below form to add new student</span>
+            </div>
+          <form method="post" action="/add_user"id="update_user">
+            <div class="new_user">
+                <div class="form-group">
+                   
+                   <label for="batch"class="text-light">Batch</label>
+                   <input type="text" name="batch" value="">
+                </div>  
+                 <div class="form-group">
+                    
+                    <label for="firstname"class="text-light">Name</label>
+                    <input type="text" name="name" value="">
+                 </div>
+                 <div class="form-group">
+                    <label for="gender"class="text-light">Gender</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-1" name="gender" value="Male">
+                        <label for="radio-1"class="radio-lable">Male</label>
+                        
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-2" name="gender" value="Female">
+                        <label for="radio-2"class="radio-lable">Female</label>
+                        
+                    </div>
+                    
+                 </div>
+                 <div class="form-group">
+                    
+                    <label for="email"class="text-light">Email</label>
+                    <input type="email" name="email" value="">
+                 </div> 
+                 <div class="form-group">
+                    
+                    <label for="phoneno"class="text-light">Phone No.</label>
+                    <input type="number" name="phoneno" value="">
+                 </div> 
+                 <div class="form-group">
+                    
+                    <label for="college"class="text-light">College</label>
+                    <input type="text" name="college" value="">
+                 </div> 
+                 <div class="form-group">
+                    <label for="placestatus"class="text-light">Placement Status</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-3" name="placestatus" value="Placed">
+                        <label for="radio-3"class="radio-lable">Placed</label>
+                        
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-4" name="placestatus" value="Not Placed">
+                        <label for="radio-4"class="radio-lable">Not Placed</label>
+                        
+                    </div>
+                    
+                 </div>
+                 <div class="form-group-sub">
+                    <label for="course"class="text-light">Course Score:</label>
+                    
+                    <label for="coursescore"class="text-light">DSA</label>
+                    <span><input type="number" name="dsa" value="">%</span>
+                    
+                    <label for="coursescore"class="text-light">Web</label>
+                    <span><input type="number" name="web" value="">%</span>
+                   
+                    <label for="coursescore"class="text-light">React Js</label>
+                    <span><input type="number" name="react" value="">%</span>
+                 </div>   
+                 <div class="form-group">
+                    <button type="submit" id="btn" class="btn text-dark update">Save</button>
+                 </div>  
+            </div>   
+          </form>
+        </div>
+    </main>
+</body>
+</html>

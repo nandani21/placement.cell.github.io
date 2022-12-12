@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/studentstyle.css">
+</head>
+<body>  
+    <main id="site-main">
+      <div class="main-container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/home"class="border-shadow">
+              Home
+            </a>
+        </div>
+
+        <!-- for showing the student details -->
+        <form action="/dashbord" method="post">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Batch</th>
+                        <th>Name</th>
+                        <th>Email Id</th>
+                        <th>Edit Details</th>
+                        <th>Delete</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <% slists.forEach((slist)=>{ %>
+                    <tr>
+                        <td><%= slist.batch%></td>
+                        <td><%= slist.name%></td>
+                        <td><%= slist.email%></td>
+                        <td><a href="/edit/<%= slist._id %>"><span>Edit Details</span></a></td>
+                        <td><a href="/delete/<%= slist._id %>"><span>Delete</span></a></td>
+                        
+                    </tr>
+                   <%  }) %>
+                </tbody>
+            </table>
+        </form>
+      </div>
+    </main>
+</body>
+</html>

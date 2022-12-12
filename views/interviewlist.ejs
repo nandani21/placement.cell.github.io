@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/studentstyle.css">
+</head>
+<body>
+    <main id="site-main">
+        <div class="main-container">
+          <div class="box-nav d-flex justify-between">
+              <a href="/home"class="border-shadow">
+                Home
+              </a>
+
+               <!-- showing the interview details -->
+          </div>
+          <form action="/interviewlist" method="post">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Student Name</th>
+                        <th>Result</th>
+                        <th>Date</th>
+                         
+                    </tr>
+                </thead>
+                <tbody>
+                    <% ilists.forEach((ilist)=>{ %>
+                    <tr> 
+                        <td><%= ilist.cname%></td>
+                        <td><%= ilist.name%></td>
+                        <td><%= ilist.result%></td>
+                        <td><%= ilist.date%></td>
+                    </tr>
+                   <%  }) %>
+                </tbody>
+            </table>
+        </form>
+
+      </div>
+    </main>    
+</body>
+</html>
